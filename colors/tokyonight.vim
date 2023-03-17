@@ -317,14 +317,17 @@ call s:HL('Yellow', s:palette.yellow, s:palette.none)
 call s:HL('Green', s:palette.green, s:palette.none)
 call s:HL('Blue', s:palette.blue, s:palette.none)
 call s:HL('Purple', s:palette.purple, s:palette.none)
+call s:HL('Cyan', s:palette.cyan, s:palette.none)
 if s:configuration.enable_italic
 call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
 call s:HL('BlueItalic', s:palette.blue, s:palette.none, 'italic')
 call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
+call s:HL('CyanItalic', s:palette.cyan, s:palette.none, 'italic')
 else
 call s:HL('RedItalic', s:palette.red, s:palette.none)
 call s:HL('BlueItalic', s:palette.blue, s:palette.none)
 call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
+call s:HL('CyanItalic', s:palette.cyan, s:palette.none)
 endif
 " }}}
 " 
