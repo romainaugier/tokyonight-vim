@@ -172,6 +172,8 @@ else
   call s:HL('FoldColumn', s:palette.grey, s:palette.bg1)
   call s:HL('Folded', s:palette.grey, s:palette.bg1)
   call s:HL('SignColumn', s:palette.fg, s:palette.black)
+  call s:HL('LineNr', s:palette.fg, s:palette.black)
+  call s:HL('CursorLineNr', s:palette.fg, s:palette.black)
   call s:HL('ToolbarLine', s:palette.fg, s:palette.bg2)
 endif
 call s:HL('ColorColumn', s:palette.none, s:palette.bg1)
