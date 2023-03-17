@@ -9,7 +9,7 @@
 " Initialization: {{{
 highlight clear
 if exists('syntax_on')
-  syntax reset
+syntax reset
 endif
 set background=dark
 
@@ -31,53 +31,53 @@ let s:configuration.current_word = get(g:, 'tokyonight_current_word', get(g:, 't
 " Palette: {{{
 "
 if s:configuration.style ==# 'night'
-  let s:palette = {
-        \ 'black':      ['#06080a',   '237',  'DarkGrey'],
-        \ 'bg0':        ['#1a1b26',   '235',  'Black'],
-        \ 'bg1':        ['#232433',   '236',  'DarkGrey'],
-        \ 'bg2':        ['#2a2b3d',   '236',  'DarkGrey'],
-        \ 'bg3':        ['#32344a',   '237',  'DarkGrey'],
-        \ 'bg4':        ['#3b3d57',   '237',  'Grey'],
-        \ 'bg_red':     ['#ff7a93',   '203',  'Red'],
-        \ 'diff_red':   ['#803d49',   '52',   'DarkRed'],
-        \ 'bg_green':   ['#b9f27c',   '107',  'Green'],
-        \ 'diff_green': ['#618041',   '22',   'DarkGreen'],
-        \ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
-        \ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
-        \ 'fg':         ['#a9b1d6',   '250',  'White'],
-        \ 'red':        ['#F7768E',   '203',  'Red'],
-        \ 'orange':     ['#FF9E64',   '215',  'Orange'],
-        \ 'yellow':     ['#E0AF68',   '179',  'Yellow'],
-        \ 'green':      ['#9ECE6A',   '107',  'Green'],
-        \ 'blue':       ['#7AA2F7',   '110',  'Blue'],
-        \ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
-        \ 'grey':       ['#444B6A',   '246',  'LightGrey'],
-        \ 'none':       ['NONE',      'NONE', 'NONE']
-        \ }
+let s:palette = {
+\ 'black':      ['#06080a',   '237',  'DarkGrey'],
+\ 'bg0':        ['#1a1b26',   '235',  'Black'],
+\ 'bg1':        ['#232433',   '236',  'DarkGrey'],
+\ 'bg2':        ['#2a2b3d',   '236',  'DarkGrey'],
+\ 'bg3':        ['#32344a',   '237',  'DarkGrey'],
+\ 'bg4':        ['#3b3d57',   '237',  'Grey'],
+\ 'bg_red':     ['#ff7a93',   '203',  'Red'],
+\ 'diff_red':   ['#803d49',   '52',   'DarkRed'],
+\ 'bg_green':   ['#b9f27c',   '107',  'Green'],
+\ 'diff_green': ['#618041',   '22',   'DarkGreen'],
+\ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
+\ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
+\ 'fg':         ['#a9b1d6',   '250',  'White'],
+\ 'red':        ['#F7768E',   '203',  'Red'],
+\ 'orange':     ['#FF9E64',   '215',  'Orange'],
+\ 'yellow':     ['#E0AF68',   '179',  'Yellow'],
+\ 'green':      ['#9ECE6A',   '107',  'Green'],
+\ 'blue':       ['#7AA2F7',   '110',  'Blue'],
+\ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
+\ 'grey':       ['#444B6A',   '246',  'LightGrey'],
+\ 'none':       ['NONE',      'NONE', 'NONE']
+\ }
 elseif s:configuration.style ==# 'storm'
-  let s:palette = {
-        \ 'black':      ['#06080a',   '237',  'DarkGrey'],
-        \ 'bg0':        ['#24283b',   '235',  'Black'],
-        \ 'bg1':        ['#282d42',   '236',  'DarkGrey'],
-        \ 'bg2':        ['#2f344d',   '236',  'DarkGrey'],
-        \ 'bg3':        ['#333954',   '237',  'DarkGrey'],
-        \ 'bg4':        ['#3a405e',   '237',  'Grey'],
-        \ 'bg_red':     ['#ff7a93',   '203',  'Red'],
-        \ 'diff_red':   ['#803d49',   '52',   'DarkRed'],
-        \ 'bg_green':   ['#b9f27c',   '107',  'Green'],
-        \ 'diff_green': ['#618041',   '22',   'DarkGreen'],
-        \ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
-        \ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
-        \ 'fg':         ['#a9b1d6',   '250',  'White'],
-        \ 'red':        ['#F7768E',   '203',  'Red'],
-        \ 'orange':     ['#FF9E64',   '215',  'Orange'],
-        \ 'yellow':     ['#E0AF68',   '179',  'Yellow'],
-        \ 'green':      ['#9ECE6A',   '107',  'Green'],
-        \ 'blue':       ['#7AA2F7',   '110',  'Blue'],
-        \ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
-        \ 'grey':       ['#444B6A',   '246',  'LightGrey'],
-        \ 'none':       ['NONE',      'NONE', 'NONE']
-        \ }
+let s:palette = {
+\ 'black':      ['#06080a',   '237',  'DarkGrey'],
+\ 'bg0':        ['#24283b',   '235',  'Black'],
+\ 'bg1':        ['#282d42',   '236',  'DarkGrey'],
+\ 'bg2':        ['#2f344d',   '236',  'DarkGrey'],
+\ 'bg3':        ['#333954',   '237',  'DarkGrey'],
+\ 'bg4':        ['#3a405e',   '237',  'Grey'],
+\ 'bg_red':     ['#ff7a93',   '203',  'Red'],
+\ 'diff_red':   ['#803d49',   '52',   'DarkRed'],
+\ 'bg_green':   ['#b9f27c',   '107',  'Green'],
+\ 'diff_green': ['#618041',   '22',   'DarkGreen'],
+\ 'bg_blue':    ['#7da6ff',   '110',  'Blue'],
+\ 'diff_blue':  ['#3e5380',   '17',   'DarkBlue'],
+\ 'fg':         ['#a9b1d6',   '250',  'White'],
+\ 'red':        ['#F7768E',   '203',  'Red'],
+\ 'orange':     ['#FF9E64',   '215',  'Orange'],
+\ 'yellow':     ['#E0AF68',   '179',  'Yellow'],
+\ 'green':      ['#9ECE6A',   '107',  'Green'],
+\ 'blue':       ['#7AA2F7',   '110',  'Blue'],
+\ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
+\ 'grey':       ['#444B6A',   '246',  'LightGrey'],
+\ 'none':       ['NONE',      'NONE', 'NONE']
+\ }
 endif
 
 " }}}
@@ -89,101 +89,101 @@ endif
 " call s:HL('Normal', s:palette.fg, s:palette.bg0)
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')  " guifg guibg gui cterm guisp
-  function! s:HL(group, fg, bg, ...)
-    let hl_string = [
-          \ 'highlight', a:group,
-          \ 'guifg=' . a:fg[0],
-          \ 'guibg=' . a:bg[0],
-          \ ]
-    if a:0 >= 1
-      if a:1 ==# 'undercurl'
-        if !s:tmux
-          call add(hl_string, 'gui=undercurl')
-        else
-          call add(hl_string, 'gui=underline')
-        endif
-        call add(hl_string, 'cterm=underline')
-      else
-        call add(hl_string, 'gui=' . a:1)
-        call add(hl_string, 'cterm=' . a:1)
-      endif
-    else
-      call add(hl_string, 'gui=NONE')
-      call add(hl_string, 'cterm=NONE')
-    endif
-    if a:0 >= 2
-      call add(hl_string, 'guisp=' . a:2[0])
-    endif
-    execute join(hl_string, ' ')
-  endfunction
+function! s:HL(group, fg, bg, ...)
+let hl_string = [
+\ 'highlight', a:group,
+\ 'guifg=' . a:fg[0],
+\ 'guibg=' . a:bg[0],
+\ ]
+if a:0 >= 1
+if a:1 ==# 'undercurl'
+if !s:tmux
+call add(hl_string, 'gui=undercurl')
+else
+call add(hl_string, 'gui=underline')
+endif
+call add(hl_string, 'cterm=underline')
+else
+call add(hl_string, 'gui=' . a:1)
+call add(hl_string, 'cterm=' . a:1)
+endif
+else
+call add(hl_string, 'gui=NONE')
+call add(hl_string, 'cterm=NONE')
+endif
+if a:0 >= 2
+call add(hl_string, 'guisp=' . a:2[0])
+endif
+execute join(hl_string, ' ')
+endfunction
 elseif s:t_Co >= 256  " ctermfg ctermbg cterm
-  function! s:HL(group, fg, bg, ...)
-    let hl_string = [
-          \ 'highlight', a:group,
-          \ 'ctermfg=' . a:fg[1],
-          \ 'ctermbg=' . a:bg[1],
-          \ ]
-    if a:0 >= 1
-      if a:1 ==# 'undercurl'
-        call add(hl_string, 'cterm=underline')
-      else
-        call add(hl_string, 'cterm=' . a:1)
-      endif
-    else
-      call add(hl_string, 'cterm=NONE')
-    endif
-    execute join(hl_string, ' ')
-  endfunction
+function! s:HL(group, fg, bg, ...)
+let hl_string = [
+\ 'highlight', a:group,
+\ 'ctermfg=' . a:fg[1],
+\ 'ctermbg=' . a:bg[1],
+\ ]
+if a:0 >= 1
+if a:1 ==# 'undercurl'
+call add(hl_string, 'cterm=underline')
+else
+call add(hl_string, 'cterm=' . a:1)
+endif
+else
+call add(hl_string, 'cterm=NONE')
+endif
+execute join(hl_string, ' ')
+endfunction
 else  " ctermfg ctermbg cterm
-  function! s:HL(group, fg, bg, ...)
-    let hl_string = [
-          \ 'highlight', a:group,
-          \ 'ctermfg=' . a:fg[2],
-          \ 'ctermbg=' . a:bg[2],
-          \ ]
-    if a:0 >= 1
-      if a:1 ==# 'undercurl'
-        call add(hl_string, 'cterm=underline')
-      else
-        call add(hl_string, 'cterm=' . a:1)
-      endif
-    else
-      call add(hl_string, 'cterm=NONE')
-    endif
-    execute join(hl_string, ' ')
-  endfunction
+function! s:HL(group, fg, bg, ...)
+let hl_string = [
+\ 'highlight', a:group,
+\ 'ctermfg=' . a:fg[2],
+\ 'ctermbg=' . a:bg[2],
+\ ]
+if a:0 >= 1
+if a:1 ==# 'undercurl'
+call add(hl_string, 'cterm=underline')
+else
+call add(hl_string, 'cterm=' . a:1)
+endif
+else
+call add(hl_string, 'cterm=NONE')
+endif
+execute join(hl_string, ' ')
+endfunction
 endif
 " }}}
 
 " Common Highlight Groups: {{{
 " UI: {{{
 if s:configuration.transparent_background
-  call s:HL('Normal', s:palette.fg, s:palette.none)
-  call s:HL('Terminal', s:palette.fg, s:palette.none)
-  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.none)
-  call s:HL('FoldColumn', s:palette.grey, s:palette.none)
-  call s:HL('Folded', s:palette.grey, s:palette.none)
-  call s:HL('SignColumn', s:palette.fg, s:palette.none)
-  call s:HL('ToolbarLine', s:palette.fg, s:palette.none)
+call s:HL('Normal', s:palette.fg, s:palette.none)
+call s:HL('Terminal', s:palette.fg, s:palette.none)
+call s:HL('EndOfBuffer', s:palette.bg0, s:palette.none)
+call s:HL('FoldColumn', s:palette.grey, s:palette.none)
+call s:HL('Folded', s:palette.grey, s:palette.none)
+call s:HL('SignColumn', s:palette.fg, s:palette.none)
+call s:HL('ToolbarLine', s:palette.fg, s:palette.none)
 else
-  call s:HL('Normal', s:palette.fg, s:palette.bg0)
-  call s:HL('Terminal', s:palette.fg, s:palette.bg0)
-  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.bg1)
-  call s:HL('FoldColumn', s:palette.grey, s:palette.black)
-  call s:HL('Folded', s:palette.grey, s:palette.bg1)
-  call s:HL('SignColumn', s:palette.fg, s:palette.black)
-  call s:HL('ToolbarLine', s:palette.fg, s:palette.bg2)
+call s:HL('Normal', s:palette.fg, s:palette.bg0)
+call s:HL('Terminal', s:palette.fg, s:palette.bg0)
+call s:HL('EndOfBuffer', s:palette.bg0, s:palette.bg1)
+call s:HL('FoldColumn', s:palette.grey, s:palette.bg1)
+call s:HL('Folded', s:palette.grey, s:palette.bg1)
+call s:HL('SignColumn', s:palette.fg, s:palette.bg1)
+call s:HL('ToolbarLine', s:palette.fg, s:palette.bg2)
 endif
 call s:HL('ColorColumn', s:palette.none, s:palette.bg1)
 call s:HL('Conceal', s:palette.grey, s:palette.none)
 if s:configuration.cursor ==# 'auto'
-  call s:HL('Cursor', s:palette.none, s:palette.none, 'reverse')
+call s:HL('Cursor', s:palette.none, s:palette.none, 'reverse')
 elseif s:configuration.cursor ==# 'red'
-  call s:HL('Cursor', s:palette.bg0, s:palette.red)
+call s:HL('Cursor', s:palette.bg0, s:palette.red)
 elseif s:configuration.cursor ==# 'green'
-  call s:HL('Cursor', s:palette.bg0, s:palette.green)
+call s:HL('Cursor', s:palette.bg0, s:palette.green)
 elseif s:configuration.cursor ==# 'blue'
-  call s:HL('Cursor', s:palette.bg0, s:palette.blue)
+call s:HL('Cursor', s:palette.bg0, s:palette.blue)
 endif
 highlight! link vCursor Cursor
 highlight! link iCursor Cursor
@@ -191,11 +191,11 @@ highlight! link lCursor Cursor
 highlight! link CursorIM Cursor
 call s:HL('CursorColumn', s:palette.none, s:palette.bg1)
 call s:HL('CursorLine', s:palette.none, s:palette.bg1)
-call s:HL('LineNr', s:palette.grey, s:palette.black)
+call s:HL('LineNr', s:palette.grey, s:palette.bg1)
 if &relativenumber == 1 && &cursorline == 0
-  call s:HL('CursorLineNr', s:palette.fg, s:palette.none)
+call s:HL('CursorLineNr', s:palette.fg, s:palette.none)
 else
-  call s:HL('CursorLineNr', s:palette.fg, s:palette.bg1)
+call s:HL('CursorLineNr', s:palette.fg, s:palette.bg1)
 endif
 call s:HL('DiffAdd', s:palette.none, s:palette.diff_green)
 call s:HL('DiffChange', s:palette.none, s:palette.diff_blue)
@@ -215,14 +215,14 @@ call s:HL('SpecialKey', s:palette.bg4, s:palette.none)
 call s:HL('Pmenu', s:palette.fg, s:palette.bg2)
 call s:HL('PmenuSbar', s:palette.none, s:palette.bg2)
 if s:configuration.menu_selection_background ==# 'blue'
-  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_blue)
-  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_blue)
+call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_blue)
+call s:HL('WildMenu', s:palette.bg0, s:palette.bg_blue)
 elseif s:configuration.menu_selection_background ==# 'green'
-  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_green)
-  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_green)
+call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_green)
+call s:HL('WildMenu', s:palette.bg0, s:palette.bg_green)
 elseif s:configuration.menu_selection_background ==# 'red'
-  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_red)
-  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_red)
+call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_red)
+call s:HL('WildMenu', s:palette.bg0, s:palette.bg_red)
 endif
 call s:HL('PmenuThumb', s:palette.none, s:palette.grey)
 call s:HL('Question', s:palette.yellow, s:palette.none)
@@ -246,32 +246,32 @@ call s:HL('debugPC', s:palette.bg0, s:palette.green)
 call s:HL('debugBreakpoint', s:palette.bg0, s:palette.red)
 call s:HL('ToolbarButton', s:palette.bg0, s:palette.bg_blue)
 if has('nvim')
-  highlight! link healthError Red
-  highlight! link healthSuccess Green
-  highlight! link healthWarning Yellow
-  highlight! link LspDiagnosticsError Grey
-  highlight! link LspDiagnosticsWarning Grey
-  highlight! link LspDiagnosticsInformation Grey
-  highlight! link LspDiagnosticsHint Grey
-  highlight! link LspReferenceText CocHighlightText
-  highlight! link LspReferenceRead CocHighlightText
-  highlight! link LspReferenceWrite CocHighlightText
+highlight! link healthError Red
+highlight! link healthSuccess Green
+highlight! link healthWarning Yellow
+highlight! link LspDiagnosticsError Grey
+highlight! link LspDiagnosticsWarning Grey
+highlight! link LspDiagnosticsInformation Grey
+highlight! link LspDiagnosticsHint Grey
+highlight! link LspReferenceText CocHighlightText
+highlight! link LspReferenceRead CocHighlightText
+highlight! link LspReferenceWrite CocHighlightText
 endif
 " 
 " }}}
 " Syntax: {{{
 if s:configuration.enable_italic
-  call s:HL('Type', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('Structure', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('StorageClass', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('Identifier', s:palette.orange, s:palette.none, 'italic')
-  call s:HL('Constant', s:palette.orange, s:palette.none, 'italic')
+call s:HL('Type', s:palette.blue, s:palette.none, 'italic')
+call s:HL('Structure', s:palette.blue, s:palette.none, 'italic')
+call s:HL('StorageClass', s:palette.blue, s:palette.none, 'italic')
+call s:HL('Identifier', s:palette.orange, s:palette.none, 'italic')
+call s:HL('Constant', s:palette.orange, s:palette.none, 'italic')
 else
-  call s:HL('Type', s:palette.blue, s:palette.none)
-  call s:HL('Structure', s:palette.blue, s:palette.none)
-  call s:HL('StorageClass', s:palette.blue, s:palette.none)
-  call s:HL('Identifier', s:palette.orange, s:palette.none)
-  call s:HL('Constant', s:palette.orange, s:palette.none)
+call s:HL('Type', s:palette.blue, s:palette.none)
+call s:HL('Structure', s:palette.blue, s:palette.none)
+call s:HL('StorageClass', s:palette.blue, s:palette.none)
+call s:HL('Identifier', s:palette.orange, s:palette.none)
+call s:HL('Constant', s:palette.orange, s:palette.none)
 endif
 call s:HL('PreProc', s:palette.red, s:palette.none)
 call s:HL('PreCondit', s:palette.red, s:palette.none)
@@ -299,13 +299,13 @@ call s:HL('Title', s:palette.red, s:palette.none, 'bold')
 call s:HL('Tag', s:palette.orange, s:palette.none)
 call s:HL('Delimiter', s:palette.fg, s:palette.none)
 if s:configuration.disable_italic_comment
-  call s:HL('Comment', s:palette.grey, s:palette.none)
-  call s:HL('SpecialComment', s:palette.grey, s:palette.none)
-  call s:HL('Todo', s:palette.blue, s:palette.none)
+call s:HL('Comment', s:palette.grey, s:palette.none)
+call s:HL('SpecialComment', s:palette.grey, s:palette.none)
+call s:HL('Todo', s:palette.blue, s:palette.none)
 else
-  call s:HL('Comment', s:palette.grey, s:palette.none, 'italic')
-  call s:HL('SpecialComment', s:palette.grey, s:palette.none, 'italic')
-  call s:HL('Todo', s:palette.blue, s:palette.none, 'italic')
+call s:HL('Comment', s:palette.grey, s:palette.none, 'italic')
+call s:HL('SpecialComment', s:palette.grey, s:palette.none, 'italic')
+call s:HL('Todo', s:palette.blue, s:palette.none, 'italic')
 endif
 call s:HL('Ignore', s:palette.grey, s:palette.none)
 call s:HL('Underlined', s:palette.none, s:palette.none, 'underline')
@@ -320,13 +320,13 @@ call s:HL('Green', s:palette.green, s:palette.none)
 call s:HL('Blue', s:palette.blue, s:palette.none)
 call s:HL('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_italic
-  call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
-  call s:HL('BlueItalic', s:palette.blue, s:palette.none, 'italic')
-  call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
+call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
+call s:HL('BlueItalic', s:palette.blue, s:palette.none, 'italic')
+call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
 else
-  call s:HL('RedItalic', s:palette.red, s:palette.none)
-  call s:HL('BlueItalic', s:palette.blue, s:palette.none)
-  call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
+call s:HL('RedItalic', s:palette.red, s:palette.none)
+call s:HL('BlueItalic', s:palette.blue, s:palette.none)
+call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
 endif
 " }}}
 " 
@@ -1458,13 +1458,13 @@ highlight! link plugEdge Purple
 " }}}
 " neoclide/coc.nvim{{{
 if s:configuration.current_word ==# 'bold'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'bold')
+call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'bold')
 elseif s:configuration.current_word ==# 'underline'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'underline')
+call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'underline')
 elseif s:configuration.current_word ==# 'italic'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'italic')
+call s:HL('CocHighlightText', s:palette.none, s:palette.none, 'italic')
 elseif s:configuration.current_word ==# 'grey background'
-  call s:HL('CocHighlightText', s:palette.none, s:palette.bg1)
+call s:HL('CocHighlightText', s:palette.none, s:palette.bg1)
 endif
 call s:HL('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
 call s:HL('CocHintHighlight', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
@@ -1473,9 +1473,9 @@ call s:HL('CocWarningFloat', s:palette.yellow, s:palette.bg2)
 call s:HL('CocInfoFloat', s:palette.blue, s:palette.bg2)
 call s:HL('CocHintFloat', s:palette.green, s:palette.bg2)
 if s:configuration.transparent_background
-  call s:HL('CocHintSign', s:palette.purple, s:palette.none)
+call s:HL('CocHintSign', s:palette.purple, s:palette.none)
 else
-  call s:HL('CocHintSign', s:palette.purple, s:palette.bg1)
+call s:HL('CocHintSign', s:palette.purple, s:palette.bg1)
 endif
 highlight! link CocCodeLens Grey
 highlight! link CocErrorSign ALEErrorSign
@@ -1518,13 +1518,13 @@ call s:HL('ALEError', s:palette.none, s:palette.none, 'undercurl', s:palette.red
 call s:HL('ALEWarning', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
 call s:HL('ALEInfo', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
 if s:configuration.transparent_background
-  call s:HL('ALEErrorSign', s:palette.red, s:palette.none)
-  call s:HL('ALEWarningSign', s:palette.yellow, s:palette.none)
-  call s:HL('ALEInfoSign', s:palette.blue, s:palette.none)
+call s:HL('ALEErrorSign', s:palette.red, s:palette.none)
+call s:HL('ALEWarningSign', s:palette.yellow, s:palette.none)
+call s:HL('ALEInfoSign', s:palette.blue, s:palette.none)
 else
-  call s:HL('ALEErrorSign', s:palette.red, s:palette.bg1)
-  call s:HL('ALEWarningSign', s:palette.yellow, s:palette.bg1)
-  call s:HL('ALEInfoSign', s:palette.blue, s:palette.bg1)
+call s:HL('ALEErrorSign', s:palette.red, s:palette.bg1)
+call s:HL('ALEWarningSign', s:palette.yellow, s:palette.bg1)
+call s:HL('ALEInfoSign', s:palette.blue, s:palette.bg1)
 endif
 highlight! link ALEVirtualTextError Grey
 highlight! link ALEVirtualTextWarning Grey
@@ -1554,7 +1554,7 @@ highlight! link SyntasticWarningSign ALEWarningSign
 " }}}
 " Yggdroot/LeaderF{{{
 if !exists('g:Lf_StlColorscheme')
-  let g:Lf_StlColorscheme = 'one'
+let g:Lf_StlColorscheme = 'one'
 endif
 call s:HL('Lf_hl_match', s:palette.green, s:palette.none, 'bold')
 call s:HL('Lf_hl_match0', s:palette.green, s:palette.none, 'bold')
@@ -1570,19 +1570,19 @@ highlight! link Lf_hl_gtagsHighlight Visual
 " }}}
 " junegunn/fzf.vim{{{
 let g:fzf_colors = {
-      \ 'fg': ['fg', 'Normal'],
-      \ 'bg': ['bg', 'Normal'],
-      \ 'hl': ['fg', 'Green'],
-      \ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-      \ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
-      \ 'hl+': ['fg', 'Green'],
-      \ 'info': ['fg', 'Yellow'],
-      \ 'prompt': ['fg', 'Red'],
-      \ 'pointer': ['fg', 'Blue'],
-      \ 'marker': ['fg', 'Blue'],
-      \ 'spinner': ['fg', 'Yellow'],
-      \ 'header': ['fg', 'Blue']
-      \ }
+\ 'fg': ['fg', 'Normal'],
+\ 'bg': ['bg', 'Normal'],
+\ 'hl': ['fg', 'Green'],
+\ 'fg+': ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+\ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
+\ 'hl+': ['fg', 'Green'],
+\ 'info': ['fg', 'Yellow'],
+\ 'prompt': ['fg', 'Red'],
+\ 'pointer': ['fg', 'Blue'],
+\ 'marker': ['fg', 'Blue'],
+\ 'spinner': ['fg', 'Yellow'],
+\ 'header': ['fg', 'Blue']
+\ }
 " }}}
 " Shougo/denite.nvim{{{
 call s:HL('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
@@ -1623,15 +1623,15 @@ highlight! link VistaLineNr Fg
 " }}}
 " airblade/vim-gitgutter{{{
 if s:configuration.transparent_background
-  call s:HL('GitGutterAdd', s:palette.green, s:palette.none)
-  call s:HL('GitGutterChange', s:palette.blue, s:palette.none)
-  call s:HL('GitGutterDelete', s:palette.red, s:palette.none)
-  call s:HL('GitGutterChangeDelete', s:palette.purple, s:palette.none)
+call s:HL('GitGutterAdd', s:palette.green, s:palette.none)
+call s:HL('GitGutterChange', s:palette.blue, s:palette.none)
+call s:HL('GitGutterDelete', s:palette.red, s:palette.none)
+call s:HL('GitGutterChangeDelete', s:palette.purple, s:palette.none)
 else
-  call s:HL('GitGutterAdd', s:palette.green, s:palette.bg1)
-  call s:HL('GitGutterChange', s:palette.blue, s:palette.bg1)
-  call s:HL('GitGutterDelete', s:palette.red, s:palette.bg1)
-  call s:HL('GitGutterChangeDelete', s:palette.purple, s:palette.bg1)
+call s:HL('GitGutterAdd', s:palette.green, s:palette.bg1)
+call s:HL('GitGutterChange', s:palette.blue, s:palette.bg1)
+call s:HL('GitGutterDelete', s:palette.red, s:palette.bg1)
+call s:HL('GitGutterChangeDelete', s:palette.purple, s:palette.bg1)
 endif
 " }}}
 " mhinz/vim-signify{{{
@@ -1714,17 +1714,17 @@ let g:indentLine_color_term = s:palette.grey[1]
 " }}}
 " nathanaelkane/vim-indent-guides{{{
 if get(g:, 'indent_guides_auto_colors', 1) == 0
-  call s:HL('IndentGuidesOdd', s:palette.bg0, s:palette.bg1)
-  call s:HL('IndentGuidesEven', s:palette.bg0, s:palette.bg2)
+call s:HL('IndentGuidesOdd', s:palette.bg0, s:palette.bg1)
+call s:HL('IndentGuidesEven', s:palette.bg0, s:palette.bg2)
 endif
 " }}}
 " kshenoy/vim-signature {{{
 if s:configuration.transparent_background
-  call s:HL('SignatureMarkText', s:palette.blue, s:palette.none)
-  call s:HL('SignatureMarkerText', s:palette.red, s:palette.none)
+call s:HL('SignatureMarkText', s:palette.blue, s:palette.none)
+call s:HL('SignatureMarkerText', s:palette.red, s:palette.none)
 else
-  call s:HL('SignatureMarkText', s:palette.blue, s:palette.bg1)
-  call s:HL('SignatureMarkerText', s:palette.red, s:palette.bg1)
+call s:HL('SignatureMarkText', s:palette.blue, s:palette.bg1)
+call s:HL('SignatureMarkerText', s:palette.red, s:palette.bg1)
 endif
 " }}}
 " mhinz/vim-startify{{{
@@ -1795,41 +1795,41 @@ highlight! link agitAuthor Yellow
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  " Definition
-  let s:terminal = {
-        \ 'black':    s:palette.black,
-        \ 'red':      s:palette.red,
-        \ 'yellow':   s:palette.yellow,
-        \ 'green':    s:palette.green,
-        \ 'cyan':     s:palette.orange,
-        \ 'blue':     s:palette.blue,
-        \ 'purple':   s:palette.purple,
-        \ 'white':    s:palette.fg
-        \ }
-  " Implementation: {{{
-  if !has('nvim')
-    let g:terminal_ansi_colors = [s:terminal.black[0], s:terminal.red[0], s:terminal.green[0], s:terminal.yellow[0],
-          \ s:terminal.blue[0], s:terminal.purple[0], s:terminal.cyan[0], s:terminal.white[0], s:terminal.black[0], s:terminal.red[0],
-          \ s:terminal.green[0], s:terminal.yellow[0], s:terminal.blue[0], s:terminal.purple[0], s:terminal.cyan[0], s:terminal.white[0]]
-  else
-    let g:terminal_color_0 = s:terminal.black[0]
-    let g:terminal_color_1 = s:terminal.red[0]
-    let g:terminal_color_2 = s:terminal.green[0]
-    let g:terminal_color_3 = s:terminal.yellow[0]
-    let g:terminal_color_4 = s:terminal.blue[0]
-    let g:terminal_color_5 = s:terminal.purple[0]
-    let g:terminal_color_6 = s:terminal.cyan[0]
-    let g:terminal_color_7 = s:terminal.white[0]
-    let g:terminal_color_8 = s:terminal.black[0]
-    let g:terminal_color_9 = s:terminal.red[0]
-    let g:terminal_color_10 = s:terminal.green[0]
-    let g:terminal_color_11 = s:terminal.yellow[0]
-    let g:terminal_color_12 = s:terminal.blue[0]
-    let g:terminal_color_13 = s:terminal.purple[0]
-    let g:terminal_color_14 = s:terminal.cyan[0]
-    let g:terminal_color_15 = s:terminal.white[0]
-  endif
-  " }}}
+" Definition
+let s:terminal = {
+\ 'black':    s:palette.black,
+\ 'red':      s:palette.red,
+\ 'yellow':   s:palette.yellow,
+\ 'green':    s:palette.green,
+\ 'cyan':     s:palette.orange,
+\ 'blue':     s:palette.blue,
+\ 'purple':   s:palette.purple,
+\ 'white':    s:palette.fg
+\ }
+" Implementation: {{{
+if !has('nvim')
+let g:terminal_ansi_colors = [s:terminal.black[0], s:terminal.red[0], s:terminal.green[0], s:terminal.yellow[0],
+\ s:terminal.blue[0], s:terminal.purple[0], s:terminal.cyan[0], s:terminal.white[0], s:terminal.black[0], s:terminal.red[0],
+\ s:terminal.green[0], s:terminal.yellow[0], s:terminal.blue[0], s:terminal.purple[0], s:terminal.cyan[0], s:terminal.white[0]]
+else
+let g:terminal_color_0 = s:terminal.black[0]
+let g:terminal_color_1 = s:terminal.red[0]
+let g:terminal_color_2 = s:terminal.green[0]
+let g:terminal_color_3 = s:terminal.yellow[0]
+let g:terminal_color_4 = s:terminal.blue[0]
+let g:terminal_color_5 = s:terminal.purple[0]
+let g:terminal_color_6 = s:terminal.cyan[0]
+let g:terminal_color_7 = s:terminal.white[0]
+let g:terminal_color_8 = s:terminal.black[0]
+let g:terminal_color_9 = s:terminal.red[0]
+let g:terminal_color_10 = s:terminal.green[0]
+let g:terminal_color_11 = s:terminal.yellow[0]
+let g:terminal_color_12 = s:terminal.blue[0]
+let g:terminal_color_13 = s:terminal.purple[0]
+let g:terminal_color_14 = s:terminal.cyan[0]
+let g:terminal_color_15 = s:terminal.white[0]
+endif
+" }}}
 endif
 " }}}
 
