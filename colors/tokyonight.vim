@@ -929,11 +929,11 @@ highlight! link pythonDecoratorName OrangeItalic
 " }}}
 " python-syntax: https://github.com/vim-python/python-syntax{{{
 highlight! link pythonExClass BlueItalic
-highlight! link pythonBuiltinType BlueItalic
-highlight! link pythonBuiltinObj OrangeItalic
+highlight! link pythonBuiltinObj Cyan
 highlight! link pythonDottedName Blue 
 highlight! link pythonBuiltinFunc Cyan
-highlight! link pythonFunction Green
+highlight! link pythonFunction Blue
+highlight! link pythonFunctionCall Blue
 highlight! link pythonDecorator Cyan
 highlight! link pythonInclude Include
 highlight! link pythonImport PreProc
