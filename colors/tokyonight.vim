@@ -169,11 +169,9 @@ else
   call s:HL('Normal', s:palette.fg, s:palette.bg0)
   call s:HL('Terminal', s:palette.fg, s:palette.bg0)
   call s:HL('EndOfBuffer', s:palette.bg0, s:palette.bg1)
-  call s:HL('FoldColumn', s:palette.grey, s:palette.bg1)
+  call s:HL('FoldColumn', s:palette.grey, s:palette.black)
   call s:HL('Folded', s:palette.grey, s:palette.bg1)
   call s:HL('SignColumn', s:palette.fg, s:palette.black)
-  call s:HL('LineNr', s:palette.fg, s:palette.black)
-  call s:HL('CursorLineNr', s:palette.fg, s:palette.black)
   call s:HL('ToolbarLine', s:palette.fg, s:palette.bg2)
 endif
 call s:HL('ColorColumn', s:palette.none, s:palette.bg1)
@@ -193,7 +191,7 @@ highlight! link lCursor Cursor
 highlight! link CursorIM Cursor
 call s:HL('CursorColumn', s:palette.none, s:palette.bg1)
 call s:HL('CursorLine', s:palette.none, s:palette.bg1)
-call s:HL('LineNr', s:palette.grey, s:palette.none)
+call s:HL('LineNr', s:palette.grey, s:palette.black)
 if &relativenumber == 1 && &cursorline == 0
   call s:HL('CursorLineNr', s:palette.fg, s:palette.none)
 else
