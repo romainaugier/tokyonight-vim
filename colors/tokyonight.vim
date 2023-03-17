@@ -52,6 +52,7 @@ let s:palette = {
 \ 'blue':       ['#7AA2F7',   '110',  'Blue'],
 \ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
 \ 'grey':       ['#444B6A',   '246',  'LightGrey'],
+\ 'cyan':       ['#14C5D9',   '217',  'Cyan'],
 \ 'none':       ['NONE',      'NONE', 'NONE']
 \ }
 elseif s:configuration.style ==# 'storm'
@@ -76,6 +77,7 @@ let s:palette = {
 \ 'blue':       ['#7AA2F7',   '110',  'Blue'],
 \ 'purple':     ['#ad8ee6',   '176',  'Magenta'],
 \ 'grey':       ['#444B6A',   '246',  'LightGrey'],
+\ 'cyan':       ['#14C5D9',   '217',  'Cyan'],
 \ 'none':       ['NONE',      'NONE', 'NONE']
 \ }
 endif
@@ -284,11 +286,11 @@ call s:HL('Error', s:palette.red, s:palette.none)
 call s:HL('Label', s:palette.purple, s:palette.none)
 call s:HL('Special', s:palette.purple, s:palette.none)
 call s:HL('SpecialChar', s:palette.purple, s:palette.none)
-call s:HL('Boolean', s:palette.purple, s:palette.none)
-call s:HL('String', s:palette.yellow, s:palette.none)
+call s:HL('Boolean', s:palette.orange, s:palette.none)
+call s:HL('String', s:palette.green, s:palette.none)
 call s:HL('Character', s:palette.yellow, s:palette.none)
 call s:HL('Number', s:palette.orange, s:palette.none)
-call s:HL('Float', s:palette.purple, s:palette.none)
+call s:HL('Float', s:palette.orange, s:palette.none)
 call s:HL('Function', s:palette.blue, s:palette.none)
 call s:HL('Operator', s:palette.blue, s:palette.none)
 call s:HL('Title', s:palette.red, s:palette.none, 'bold')
@@ -926,19 +928,21 @@ highlight! link pythonDecoratorName OrangeItalic
 highlight! link pythonExClass BlueItalic
 highlight! link pythonBuiltinType BlueItalic
 highlight! link pythonBuiltinObj OrangeItalic
-highlight! link pythonDottedName OrangeItalic
-highlight! link pythonBuiltinFunc Green
+highlight! link pythonDottedName Blue 
+highlight! link pythonBuiltinFunc Cyan
 highlight! link pythonFunction Green
-highlight! link pythonDecorator OrangeItalic
+highlight! link pythonDecorator Cyan
 highlight! link pythonInclude Include
 highlight! link pythonImport PreProc
-highlight! link pythonOperator Red
-highlight! link pythonConditional Red
+highlight! link pythonOperator White 
+highlight! link pythonConditional Purple 
 highlight! link pythonRepeat Red
 highlight! link pythonException Red
-highlight! link pythonNone OrangeItalic
+highlight! link pythonNone Orange
 highlight! link pythonCoding Grey
 highlight! link pythonDot Grey
+highlight! link pythonClassVar Red
+highlight! link pythonBuiltinType Cyan
 " }}}
 " semshi: https://github.com/numirias/semshi{{{
 call s:HL('semshiUnresolved', s:palette.orange, s:palette.none, 'undercurl')
