@@ -168,7 +168,7 @@ if s:configuration.transparent_background
 else
   call s:HL('Normal', s:palette.fg, s:palette.bg0)
   call s:HL('Terminal', s:palette.fg, s:palette.bg0)
-  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.black)
+  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.bg1)
   call s:HL('FoldColumn', s:palette.grey, s:palette.bg1)
   call s:HL('Folded', s:palette.grey, s:palette.bg1)
   call s:HL('SignColumn', s:palette.fg, s:palette.black)
